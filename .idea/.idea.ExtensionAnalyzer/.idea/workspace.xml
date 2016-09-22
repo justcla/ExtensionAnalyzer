@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee6ba8e3-9c9a-4994-878e-e941872f995d" name="Default" comment="" />
+    <ignored path="ExtensionAnalyzer.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ExtensionAnalyzer" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Processor.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Processor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="489">
+              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <folding>
+                <marker date="1474496471072" expanded="true" signature="6:131" ph="..." />
+                <marker date="1474496471072" expanded="true" signature="162:4441" ph="{...}" />
+                <marker date="1474496471072" expanded="true" signature="184:4439" ph="{...}" />
+                <marker date="1474496471072" expanded="true" signature="262:2175" ph="{...}" />
+                <marker date="1474496471072" expanded="true" signature="1966:2066" ph="/* ... */" />
+                <marker date="1474496471072" expanded="true" signature="2236:3626" ph="{...}" />
+                <marker date="1474496471072" expanded="true" signature="3691:4433" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DependencyAnalyzerReport.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/DependencyAnalyzerReport.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+              <folding>
+                <marker date="1474487395942" expanded="true" signature="6:102" ph="..." />
+                <marker date="1474487395942" expanded="true" signature="120:314" ph="{...}" />
+                <marker date="1474487395942" expanded="true" signature="164:312" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDependencyAnalyzer.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/IDependencyAnalyzer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+              <folding>
+                <marker date="1474487395975" expanded="true" signature="6:102" ph="..." />
+                <marker date="1474487395975" expanded="true" signature="120:280" ph="{...}" />
+                <marker date="1474487395975" expanded="true" signature="163:278" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VsixManifestParser.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Code/VsixManifestParser.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1712">
+              <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
+              <folding>
+                <marker date="1474492043984" expanded="true" signature="6:120" ph="..." />
+                <marker date="1474492043984" expanded="true" signature="188:4168" ph="{...}" />
+                <marker date="1474492043984" expanded="true" signature="246:929" ph="{...}" />
+                <marker date="1474492043984" expanded="true" signature="992:1599" ph="{...}" />
+                <marker date="1474492043984" expanded="true" signature="1665:2087" ph="{...}" />
+                <marker date="1474492043984" expanded="true" signature="2158:2630" ph="{...}" />
+                <marker date="1474492043984" expanded="true" signature="2673:2790" ph="{...}" />
+                <marker date="1474492043984" expanded="true" signature="2869:3554" ph="{...}" />
+                <marker date="1474492043984" expanded="true" signature="3650:4164" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DependencyAnalyzer.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/DependencyAnalyzer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <folding>
+                <marker date="1474487772133" expanded="true" signature="6:148" ph="..." />
+                <marker date="1474487772133" expanded="true" signature="166:2853" ph="{...}" />
+                <marker date="1474487772133" expanded="true" signature="226:2851" ph="{...}" />
+                <marker date="1474487772133" expanded="true" signature="241:337" ph="Properties" />
+                <marker date="1474487772133" expanded="true" signature="347:2845" ph="Analyze Support" />
+                <marker date="1474487772133" expanded="true" signature="438:550" ph="{...}" />
+                <marker date="1474487772133" expanded="true" signature="695:1092" ph="{...}" />
+                <marker date="1474487772133" expanded="true" signature="1158:2825" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssemblyReferenceInfo.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/AssemblyReferenceInfo.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+              <folding>
+                <marker date="1474487395833" expanded="true" signature="6:110" ph="..." />
+                <marker date="1474487395833" expanded="true" signature="128:1791" ph="{...}" />
+                <marker date="1474487395833" expanded="true" signature="169:1789" ph="{...}" />
+                <marker date="1474487395833" expanded="true" signature="184:403" ph="Fields" />
+                <marker date="1474487395833" expanded="true" signature="413:703" ph="Properties" />
+                <marker date="1474487395833" expanded="true" signature="713:878" ph="Constructor" />
+                <marker date="1474487395833" expanded="true" signature="797:858" ph="{...}" />
+                <marker date="1474487395833" expanded="true" signature="888:1328" ph="Reference Support" />
+                <marker date="1474487395833" expanded="true" signature="975:1107" ph="{...}" />
+                <marker date="1474487395833" expanded="true" signature="1172:1308" ph="{...}" />
+                <marker date="1474487395833" expanded="true" signature="1338:1783" ph="HashCode Support" />
+                <marker date="1474487395833" expanded="true" signature="1405:1481" ph="{...}" />
+                <marker date="1474487395833" expanded="true" signature="1530:1763" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <folding>
+                <marker date="1474494963621" expanded="true" signature="6:30" ph="..." />
+                <marker date="1474494963621" expanded="true" signature="61:506" ph="{...}" />
+                <marker date="1474494963621" expanded="true" signature="81:504" ph="{...}" />
+                <marker date="1474494963621" expanded="true" signature="127:498" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="592">
+              <caret line="37" column="82" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="82" />
+              <folding>
+                <marker date="1474488970906" expanded="true" signature="6:75" ph="..." />
+                <marker date="1474488970906" expanded="true" signature="93:3075" ph="{...}" />
+                <marker date="1474488970906" expanded="true" signature="120:3073" ph="{...}" />
+                <marker date="1474488970906" expanded="true" signature="171:3067" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsoleVisualizer.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/ConsoleVisualizer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-432">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1474487395894" expanded="true" signature="6:85" ph="..." />
+                <marker date="1474487395894" expanded="true" signature="103:3810" ph="{...}" />
+                <marker date="1474487395894" expanded="true" signature="164:3808" ph="{...}" />
+                <marker date="1474487395894" expanded="true" signature="466:551" ph="Fields" />
+                <marker date="1474487395894" expanded="true" signature="561:693" ph="Properties" />
+                <marker date="1474487395894" expanded="true" signature="703:867" ph="Constructor" />
+                <marker date="1474487395894" expanded="true" signature="789:847" ph="{...}" />
+                <marker date="1474487395894" expanded="true" signature="877:3802" ph="Visualize Support" />
+                <marker date="1474487395894" expanded="true" signature="935:3782" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../../ConsoleApplication1/ConsoleApplication1.csproj" />
+        <option value="$PROJECT_DIR$/../../ExtensionAnalyzer/Code/PackageHelper.cs" />
+        <option value="$PROJECT_DIR$/../../ExtensionAnalyzer/packages.config" />
+        <option value="$PROJECT_DIR$/../../ExtensionAnalyzer/ExtensionAnalyzer.csproj" />
+        <option value="$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/Program.cs" />
+        <option value="$PROJECT_DIR$/../../ExtensionAnalyzer/Code/VsixManifestParser.cs" />
+        <option value="$PROJECT_DIR$/../../ExtensionAnalyzer/Program.cs" />
+        <option value="$PROJECT_DIR$/../../ExtensionAnalyzer/Processor.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1216" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource SolutionExplorer="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExtensionAnalyzer (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExtensionAnalyzer" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExtensionAnalyzer (1 project)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ExtensionAnalyzer" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AsmSpy" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <option name="show-file-system" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/Native/MachineType.cs" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="highlight&#9;null&#9;null" />
+  </component>
+  <component name="RunManager" selected=".NET Project.Default">
+    <configuration default="true" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../../ExtensionAnalyzer/ExtensionAnalyzer.csproj" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../ExtensionAnalyzer/bin/Debug/ExtensionAnalyzer.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../ExtensionAnalyzer/bin/Debug" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue=".NET Project.Default" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee6ba8e3-9c9a-4994-878e-e941872f995d" name="Default" comment="" />
+      <created>1474484376309</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1474484376309</updated>
+      <workItem from="1474484378339" duration="78000" />
+      <workItem from="1474484459318" duration="74000" />
+      <workItem from="1474484535043" duration="9000" />
+      <workItem from="1474484592892" duration="1958000" />
+      <workItem from="1474487772295" duration="7699000" />
+      <workItem from="1474575546236" duration="733000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="10551000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1216" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3988658" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2740668" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20575693" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2740668" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3194707" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986766" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet breakpoint">
+          <url>file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/DependencyAnalyzer.cs</url>
+          <line>63</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet breakpoint">
+          <url>file://$PROJECT_DIR$/../../ExtensionAnalyzer/Processor.cs</url>
+          <line>71</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Processor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1264">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <marker date="1474496471072" expanded="true" signature="6:131" ph="..." />
+            <marker date="1474496471072" expanded="true" signature="162:4441" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="184:4439" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="262:2175" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="1966:2066" ph="/* ... */" />
+            <marker date="1474496471072" expanded="true" signature="2236:3626" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="3691:4433" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/DgmlExport.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <marker date="1474487395959" expanded="true" signature="6:102" ph="..." />
+            <marker date="1474487395959" expanded="true" signature="120:2733" ph="{...}" />
+            <marker date="1474487395959" expanded="true" signature="174:2731" ph="{...}" />
+            <marker date="1474487395959" expanded="true" signature="378:504" ph="{...}" />
+            <marker date="1474487395959" expanded="true" signature="537:2725" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/DependencyAnalyzerReport.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <marker date="1474487395942" expanded="true" signature="6:102" ph="..." />
+            <marker date="1474487395942" expanded="true" signature="120:314" ph="{...}" />
+            <marker date="1474487395942" expanded="true" signature="164:312" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/IDependencyAnalyzer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <marker date="1474487395975" expanded="true" signature="6:102" ph="..." />
+            <marker date="1474487395975" expanded="true" signature="120:280" ph="{...}" />
+            <marker date="1474487395975" expanded="true" signature="163:278" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Code/VsixManifestParser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1712">
+          <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
+          <folding>
+            <marker date="1474492043984" expanded="true" signature="6:120" ph="..." />
+            <marker date="1474492043984" expanded="true" signature="188:4168" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="246:929" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="992:1599" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="1665:2087" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="2158:2630" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="2673:2790" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="2869:3554" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="3650:4164" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/DependencyAnalyzer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <marker date="1474487772133" expanded="true" signature="6:148" ph="..." />
+            <marker date="1474487772133" expanded="true" signature="166:2853" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="226:2851" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="241:337" ph="Properties" />
+            <marker date="1474487772133" expanded="true" signature="347:2845" ph="Analyze Support" />
+            <marker date="1474487772133" expanded="true" signature="438:550" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="695:1092" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="1158:2825" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/AssemblyReferenceInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1474487395833" expanded="true" signature="6:110" ph="..." />
+            <marker date="1474487395833" expanded="true" signature="128:1791" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="169:1789" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="184:403" ph="Fields" />
+            <marker date="1474487395833" expanded="true" signature="413:703" ph="Properties" />
+            <marker date="1474487395833" expanded="true" signature="713:878" ph="Constructor" />
+            <marker date="1474487395833" expanded="true" signature="797:858" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="888:1328" ph="Reference Support" />
+            <marker date="1474487395833" expanded="true" signature="975:1107" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="1172:1308" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="1338:1783" ph="HashCode Support" />
+            <marker date="1474487395833" expanded="true" signature="1405:1481" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="1530:1763" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="37" column="82" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="82" />
+          <folding>
+            <marker date="1474488970906" expanded="true" signature="6:75" ph="..." />
+            <marker date="1474488970906" expanded="true" signature="93:3075" ph="{...}" />
+            <marker date="1474488970906" expanded="true" signature="120:3073" ph="{...}" />
+            <marker date="1474488970906" expanded="true" signature="171:3067" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/IDependencyVisualizer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <marker date="1474487395994" expanded="true" signature="6:85" ph="..." />
+            <marker date="1474487395994" expanded="true" signature="103:188" ph="{...}" />
+            <marker date="1474487395994" expanded="true" signature="148:186" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/ConsoleVisualizer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+          <folding>
+            <marker date="1474487395894" expanded="true" signature="6:85" ph="..." />
+            <marker date="1474487395894" expanded="true" signature="103:3810" ph="{...}" />
+            <marker date="1474487395894" expanded="true" signature="164:3808" ph="{...}" />
+            <marker date="1474487395894" expanded="true" signature="466:551" ph="Fields" />
+            <marker date="1474487395894" expanded="true" signature="561:693" ph="Properties" />
+            <marker date="1474487395894" expanded="true" signature="703:867" ph="Constructor" />
+            <marker date="1474487395894" expanded="true" signature="789:847" ph="{...}" />
+            <marker date="1474487395894" expanded="true" signature="877:3802" ph="Visualize Support" />
+            <marker date="1474487395894" expanded="true" signature="935:3782" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/Native/Program.cs" />
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Processor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+          <folding>
+            <marker date="1474496471072" expanded="true" signature="6:131" ph="..." />
+            <marker date="1474496471072" expanded="true" signature="162:4441" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="184:4439" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="262:2175" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="1966:2066" ph="/* ... */" />
+            <marker date="1474496471072" expanded="true" signature="2236:3626" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="3691:4433" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/DependencyAnalyzer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1474487772133" expanded="true" signature="6:148" ph="..." />
+            <marker date="1474487772133" expanded="true" signature="166:2853" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="226:2851" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="241:337" ph="Properties" />
+            <marker date="1474487772133" expanded="true" signature="347:2845" ph="Analyze Support" />
+            <marker date="1474487772133" expanded="true" signature="438:550" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="695:1092" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="1158:2825" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1474488970906" expanded="true" signature="6:75" ph="..." />
+            <marker date="1474488970906" expanded="true" signature="93:3075" ph="{...}" />
+            <marker date="1474488970906" expanded="true" signature="120:3073" ph="{...}" />
+            <marker date="1474488970906" expanded="true" signature="171:3067" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Code/PackageHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ConsoleApplication1/ConsoleApplication1.csproj" />
+    <entry file="file://$PROJECT_DIR$/../../ConsoleApplication1/ConsoleApplication1.csproj" />
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/packages.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Code/PackageHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/Native/Program.cs" />
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/ExtensionAnalyzer.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/ConsoleLogger.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/IDependencyVisualizer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <marker date="1474487395994" expanded="true" signature="6:85" ph="..." />
+            <marker date="1474487395994" expanded="true" signature="103:188" ph="{...}" />
+            <marker date="1474487395994" expanded="true" signature="148:186" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/IDependencyAnalyzer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <marker date="1474487395975" expanded="true" signature="6:102" ph="..." />
+            <marker date="1474487395975" expanded="true" signature="120:280" ph="{...}" />
+            <marker date="1474487395975" expanded="true" signature="163:278" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Code/VsixManifestParser.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1712">
+          <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
+          <folding>
+            <marker date="1474492043984" expanded="true" signature="6:120" ph="..." />
+            <marker date="1474492043984" expanded="true" signature="188:4168" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="246:929" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="992:1599" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="1665:2087" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="2158:2630" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="2673:2790" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="2869:3554" ph="{...}" />
+            <marker date="1474492043984" expanded="true" signature="3650:4164" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/DependencyAnalyzer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <marker date="1474487772133" expanded="true" signature="6:148" ph="..." />
+            <marker date="1474487772133" expanded="true" signature="166:2853" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="226:2851" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="241:337" ph="Properties" />
+            <marker date="1474487772133" expanded="true" signature="347:2845" ph="Analyze Support" />
+            <marker date="1474487772133" expanded="true" signature="438:550" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="695:1092" ph="{...}" />
+            <marker date="1474487772133" expanded="true" signature="1158:2825" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="37" column="82" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="82" />
+          <folding>
+            <marker date="1474488970906" expanded="true" signature="6:75" ph="..." />
+            <marker date="1474488970906" expanded="true" signature="93:3075" ph="{...}" />
+            <marker date="1474488970906" expanded="true" signature="120:3073" ph="{...}" />
+            <marker date="1474488970906" expanded="true" signature="171:3067" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/DependencyAnalyzerReport.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <marker date="1474487395942" expanded="true" signature="6:102" ph="..." />
+            <marker date="1474487395942" expanded="true" signature="120:314" ph="{...}" />
+            <marker date="1474487395942" expanded="true" signature="164:312" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/AssemblyReferenceInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <marker date="1474487395833" expanded="true" signature="6:110" ph="..." />
+            <marker date="1474487395833" expanded="true" signature="128:1791" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="169:1789" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="184:403" ph="Fields" />
+            <marker date="1474487395833" expanded="true" signature="413:703" ph="Properties" />
+            <marker date="1474487395833" expanded="true" signature="713:878" ph="Constructor" />
+            <marker date="1474487395833" expanded="true" signature="797:858" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="888:1328" ph="Reference Support" />
+            <marker date="1474487395833" expanded="true" signature="975:1107" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="1172:1308" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="1338:1783" ph="HashCode Support" />
+            <marker date="1474487395833" expanded="true" signature="1405:1481" ph="{...}" />
+            <marker date="1474487395833" expanded="true" signature="1530:1763" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <marker date="1474494963621" expanded="true" signature="6:30" ph="..." />
+            <marker date="1474494963621" expanded="true" signature="61:506" ph="{...}" />
+            <marker date="1474494963621" expanded="true" signature="81:504" ph="{...}" />
+            <marker date="1474494963621" expanded="true" signature="127:498" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/DgmlExport.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <marker date="1474487395959" expanded="true" signature="6:102" ph="..." />
+            <marker date="1474487395959" expanded="true" signature="120:2733" ph="{...}" />
+            <marker date="1474487395959" expanded="true" signature="174:2731" ph="{...}" />
+            <marker date="1474487395959" expanded="true" signature="378:504" ph="{...}" />
+            <marker date="1474487395959" expanded="true" signature="537:2725" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/Processor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <marker date="1474496471072" expanded="true" signature="6:131" ph="..." />
+            <marker date="1474496471072" expanded="true" signature="162:4441" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="184:4439" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="262:2175" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="1966:2066" ph="/* ... */" />
+            <marker date="1474496471072" expanded="true" signature="2236:3626" ph="{...}" />
+            <marker date="1474496471072" expanded="true" signature="3691:4433" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ExtensionAnalyzer/AsmSpy/ConsoleVisualizer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1474487395894" expanded="true" signature="6:85" ph="..." />
+            <marker date="1474487395894" expanded="true" signature="103:3810" ph="{...}" />
+            <marker date="1474487395894" expanded="true" signature="164:3808" ph="{...}" />
+            <marker date="1474487395894" expanded="true" signature="466:551" ph="Fields" />
+            <marker date="1474487395894" expanded="true" signature="561:693" ph="Properties" />
+            <marker date="1474487395894" expanded="true" signature="703:867" ph="Constructor" />
+            <marker date="1474487395894" expanded="true" signature="789:847" ph="{...}" />
+            <marker date="1474487395894" expanded="true" signature="877:3802" ph="Visualize Support" />
+            <marker date="1474487395894" expanded="true" signature="935:3782" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
