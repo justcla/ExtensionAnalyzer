@@ -15,23 +15,34 @@ namespace ConsoleApplication1
         {
             Console.Out.WriteLine("Analyzer started.");
 
-            const string extensionsDir = @"C:\Extensions";
-            string extensionsExtractDir = Path.Combine(extensionsDir, "extracted");
             const string baseInstallDir = @"C:\Extensions\BaseInstall";
             string baseInstallExtractDir = GetExtractDir(baseInstallDir);
 
 //            CleanDirectory(GetExtractDir(baseInstallDir));
-            ExtractVsixFiles(baseInstallDir);
+//            ExtractVsixFiles(baseInstallDir);
 
             // Get list of all DLLs in the Base Install
+            SortedSet<string> baseDllNames = GetBaseInstallDlls(baseInstallExtractDir);
+
+//            ProcessAll(extensionsDir, extractDir);
+//            const string extensionsDir = @"C:\Extensions";
+//            string extensionsExtractDir = Path.Combine(extensionsDir, "extracted");
+            const string galleryExtensionsDir = @"\\alexeylerdev\Public\GalleryExtensions\done";
+            ProcessAssemblyComparisonForAllExtensions(galleryExtensionsDir, baseDllNames);
+        }
+
+        private static SortedSet<string> GetBaseInstallDlls(string baseInstallExtractDir)
+        {
             Console.Out.WriteLine("Fetching list of DLLs in Base Install");
             string[] allBaseDlls = FindAllDlls(baseInstallExtractDir);
             SortedSet<string> baseDllNames = StripToRawName(allBaseDlls);
+            Console.Out.WriteLine($"Found {baseDllNames.Count} DLLs in Base VSIXs");
+            // Add the extra ones that we know about
+            baseDllNames.Add("PresentationCore");
+            baseDllNames.Add("PresentationFramework");
+            baseDllNames.Add("WindowsBase");
             PrintArray(baseDllNames, "  ");
-            Console.Out.WriteLine($"Found {baseDllNames.Count} DLLs");
-
-//            ProcessAll(extensionsDir, extractDir);
-            ProcessAssemblyComparisonForAllExtensions(extensionsExtractDir, baseDllNames);
+            return baseDllNames;
         }
 
         private static SortedSet<string> StripToRawName(string[] allBaseDlls)
@@ -205,6 +216,7 @@ namespace ConsoleApplication1
             foreach (string extensionDir in extensionDirs)
             {
                 string vsixName = GetVsixDirName(extensionDir);
+                Console.Out.WriteLine("");
                 Console.Out.WriteLine("Processing assembly directory: {0}", extensionDir);
                 bool isCompatible = ProcessExtensionAssemblies(extensionDir, baseInstallDlls);
                 if (isCompatible)
