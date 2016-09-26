@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading;
+using System.Linq;
 using AsmSpy;
 using ExtensionGallery.Code;
 
@@ -9,6 +9,17 @@ namespace ConsoleApplication1
 {
     class Processor
     {
+        static void Main(string[] args)
+        {
+            Console.Out.WriteLine("Analyzer started.");
+            string extensionsDir = @"C:\Extensions";
+            string extractDir = Path.Combine(extensionsDir, "extracted");
+
+            Processor processor = new Processor();
+            //            processor.ProcessAll(extensionsDir, extractDir);
+            processor.FetchAssemblyList(extractDir);
+        }
+
         public void ProcessAll(string extensionsDir, string extractDir)
         {
             PackageHelper packageHelper = new PackageHelper(extensionsDir, extractDir);
@@ -61,7 +72,7 @@ namespace ConsoleApplication1
             DirectoryInfo directoryInfo = new DirectoryInfo(directoryPath);
             if (!Directory.Exists(directoryPath))
             {
-                consoleLogger.LogMessage(string.Format("Directory: '{0}' does not exist.", directoryPath));
+                consoleLogger.LogMessage($"Directory: '{directoryPath}' does not exist.");
                 throw new ArgumentException("Cannot process files in directory: " + directoryPath);
             }
 
@@ -69,20 +80,43 @@ namespace ConsoleApplication1
             IEnumerable<string> extensionDirs = Directory.EnumerateDirectories(directoryPath);
             foreach (string extensionDir in extensionDirs)
             {
-                IDependencyAnalyzer analyzer = new DependencyAnalyzer() {DirectoryInfo = new DirectoryInfo(extensionDir)};
-                DependencyAnalyzerResult result = analyzer.Analyze(consoleLogger);
-
-                // Output results to Console
-                IDependencyVisualizer visualizer = new ConsoleVisualizer(result);
-                visualizer.Visualize();
-
-                // Export results to file
-                IDependencyVisualizer export = new DgmlExport(result, Path.Combine(directoryPath, extensionDir + ".references.dgml"), consoleLogger);
-                export.Visualize();
+                Console.Out.WriteLine("Processing assembly directory: {0}", extensionDir);
+                ProcessExtensionAssemblies(extensionDir);
             }
 
             Console.Out.WriteLine("Finished fetching assemblies");
 
+        }
+
+        private static void ProcessExtensionAssemblies(string extensionDir)
+        {
+            DependencyAnalyzerResult result = DependencyAnalyzer.Analyze(new DirectoryInfo(extensionDir));
+
+            List<string> assemblies = FetchAssemblyNames(result, true);
+
+            PrintAssemblyList(assemblies);
+        }
+
+        private static List<string> FetchAssemblyNames(DependencyAnalyzerResult result, bool skipSystem)
+        {
+            List<string> assemblyNames = new List<string>();
+            foreach (string assembly in result.Assemblies.Keys.AsEnumerable())
+            {
+                // Skip the system assemblies if flagged to skip
+                if (skipSystem && (assembly.StartsWith("System") || assembly.StartsWith("mscorlib"))) continue;
+
+                assemblyNames.Add(assembly);
+            }
+            return assemblyNames;
+        }
+
+        private static void PrintAssemblyList(List<string> assemblies)
+        {
+            foreach (string assembly in assemblies)
+            {
+                // Print out the assembly being referenced
+                Console.Out.WriteLine($"    {assembly}");
+            }
         }
 
         private void PrintAnalysis(PackageHelper packageHelper)

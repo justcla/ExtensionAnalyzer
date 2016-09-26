@@ -8,38 +8,19 @@ using AsmSpy.Native;
 
 namespace AsmSpy
 {
-    public class DependencyAnalyzer : IDependencyAnalyzer
+    public class DependencyAnalyzer
     {
-        #region Properties
-
-        public DirectoryInfo DirectoryInfo { get; set; }
-
-        #endregion
-
         #region Analyze Support
 
-        private IEnumerable<FileInfo> GetLibrariesAndExecutables()
+        public static DependencyAnalyzerResult Analyze(DirectoryInfo directoryInfo)
         {
-            return DirectoryInfo.GetFiles("*.dll").Concat(DirectoryInfo.GetFiles("*.exe"));
-        }
+            FileInfo[] filesToAnalyze = GetLibrariesAndExecutables(directoryInfo).ToArray();
 
-        private AssemblyReferenceInfo GetAssemblyReferenceInfo(Dictionary<string, AssemblyReferenceInfo> assemblies, AssemblyName assemblyName)
-        {
-            AssemblyReferenceInfo assemblyReferenceInfo;
-            if (!assemblies.TryGetValue(assemblyName.FullName, out assemblyReferenceInfo))
+            var result = new DependencyAnalyzerResult
             {
-                assemblyReferenceInfo = new AssemblyReferenceInfo(assemblyName);
-                assemblies.Add(assemblyName.FullName, assemblyReferenceInfo);
-            }
-            return assemblyReferenceInfo;
-        }
-
-
-        public DependencyAnalyzerResult Analyze(ILogger logger)
-        {
-            var result = new DependencyAnalyzerResult();
-
-            result.AnalyzedFiles = GetLibrariesAndExecutables().ToArray();
+                AnalyzedFiles = filesToAnalyze,
+                Assemblies = new Dictionary<string, AssemblyReferenceInfo>(StringComparer.OrdinalIgnoreCase)
+            };
 
             if (result.AnalyzedFiles.Length <= 0)
             {
@@ -49,7 +30,7 @@ namespace AsmSpy
             result.Assemblies = new Dictionary<string, AssemblyReferenceInfo>(StringComparer.OrdinalIgnoreCase);
             foreach (var fileInfo in result.AnalyzedFiles.OrderBy(asm => asm.Name))
             {
-                logger.LogMessage(string.Format("Checking file {0}", fileInfo.Name));
+//                logger.LogMessage(string.Format("Checking file {0}", fileInfo.Name));
                 Assembly assembly;
                 try
                 {
@@ -61,7 +42,7 @@ namespace AsmSpy
                 }
                 catch (Exception ex)
                 {
-                    logger.LogWarning(string.Format("Failed to load assembly '{0}': {1}", fileInfo.FullName, ex.Message));
+//                    logger.LogWarning(string.Format("Failed to load assembly '{0}': {1}", fileInfo.FullName, ex.Message));
                     continue;
                 }
                 var assemblyReferenceInfo = GetAssemblyReferenceInfo(result.Assemblies, assembly.GetName());
@@ -74,6 +55,22 @@ namespace AsmSpy
                 }
             }
             return result;
+        }
+
+        private static IEnumerable<FileInfo> GetLibrariesAndExecutables(DirectoryInfo directoryInfo)
+        {
+            return directoryInfo.GetFiles("*.dll").Concat(directoryInfo.GetFiles("*.exe"));
+        }
+
+        private static AssemblyReferenceInfo GetAssemblyReferenceInfo(Dictionary<string, AssemblyReferenceInfo> assemblies, AssemblyName assemblyName)
+        {
+            AssemblyReferenceInfo assemblyReferenceInfo;
+            if (!assemblies.TryGetValue(assemblyName.FullName, out assemblyReferenceInfo))
+            {
+                assemblyReferenceInfo = new AssemblyReferenceInfo(assemblyName);
+                assemblies.Add(assemblyName.FullName, assemblyReferenceInfo);
+            }
+            return assemblyReferenceInfo;
         }
 
         #endregion

@@ -31,11 +31,9 @@ namespace AsmSpy
                 bool onlyConflicts = !all.HasValue();
                 bool skipSystem = nonsystem.HasValue();
 
-                IDependencyAnalyzer analyzer = new DependencyAnalyzer() { DirectoryInfo = new DirectoryInfo(directoryPath) };
+//                Console.Out.WriteLine(string.Format("Check assemblies in: {0}", analyzer.DirectoryInfo));
 
-                consoleLogger.LogMessage(string.Format("Check assemblies in: {0}", analyzer.DirectoryInfo));
-
-                DependencyAnalyzerResult result = analyzer.Analyze(consoleLogger);
+                DependencyAnalyzerResult result = DependencyAnalyzer.Analyze(new DirectoryInfo(directoryPath));
 
                 if (!noconsole.HasValue())
                 {
@@ -43,11 +41,11 @@ namespace AsmSpy
                     visualizer.Visualize();
                 }
 
-                if (dgmlExport.HasValue())
-                {
-                    IDependencyVisualizer export = new DgmlExport(result, string.IsNullOrWhiteSpace(dgmlExport.Value()) ? Path.Combine(analyzer.DirectoryInfo.FullName, "references.dgml") : dgmlExport.Value(), consoleLogger);
-                    export.Visualize();
-                }
+//                if (dgmlExport.HasValue())
+//                {
+//                    IDependencyVisualizer export = new DgmlExport(result, string.IsNullOrWhiteSpace(dgmlExport.Value()) ? Path.Combine(analyzer.DirectoryInfo.FullName, "references.dgml") : dgmlExport.Value(), consoleLogger);
+//                    export.Visualize();
+//                }
 
                 return 0;
             });
