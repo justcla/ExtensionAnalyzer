@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using AsmSpy;
 using ExtensionGallery.Code;
 
@@ -12,15 +14,132 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             Console.Out.WriteLine("Analyzer started.");
-            string extensionsDir = @"C:\Extensions";
-            string extractDir = Path.Combine(extensionsDir, "extracted");
 
-            Processor processor = new Processor();
-            //            processor.ProcessAll(extensionsDir, extractDir);
-            processor.FetchAssemblyList(extractDir);
+            const string extensionsDir = @"C:\Extensions";
+            string extensionsExtractDir = Path.Combine(extensionsDir, "extracted");
+            const string baseInstallDir = @"C:\Extensions\BaseInstall";
+            string baseInstallExtractDir = GetExtractDir(baseInstallDir);
+
+//            CleanDirectory(GetExtractDir(baseInstallDir));
+            ExtractVsixFiles(baseInstallDir);
+
+            // Get list of all DLLs in the Base Install
+            Console.Out.WriteLine("Fetching list of DLLs in Base Install");
+            string[] allBaseDlls = FindAllDlls(baseInstallExtractDir);
+            SortedSet<string> baseDllNames = StripToRawName(allBaseDlls);
+            PrintArray(baseDllNames, "  ");
+            Console.Out.WriteLine($"Found {baseDllNames.Count} DLLs");
+
+//            ProcessAll(extensionsDir, extractDir);
+            ProcessAssemblyComparisonForAllExtensions(extensionsExtractDir, baseDllNames);
         }
 
-        public void ProcessAll(string extensionsDir, string extractDir)
+        private static SortedSet<string> StripToRawName(string[] allBaseDlls)
+        {
+            SortedSet<string> rawNames = new SortedSet<string>();
+            foreach (string fullName in allBaseDlls)
+            {
+                rawNames.Add(GetVsixName(fullName));
+            }
+            return rawNames;
+        }
+
+        private static void PrintArray(IEnumerable<string> allBaseDlls, string padding)
+        {
+            foreach(string s in allBaseDlls)
+            {
+                Console.Out.WriteLine(padding + s);
+            }
+        }
+
+        private static void CleanDirectory(string directory)
+        {
+            Console.Out.WriteLine($"Deleting directory: {directory}");
+            if (Directory.Exists(directory))
+            {
+                Directory.Delete(directory, true);
+                Console.Out.WriteLine($"Directory deleted: {directory}");
+            }
+            else
+            {
+                Console.Out.WriteLine($"Directory does not exist: {directory}");
+            }
+        }
+
+        public static void ExtractVsixFiles(string extensionsDir)
+        {
+            Console.Out.WriteLine("Looking for extensions in Extensions Dir: " + extensionsDir);
+
+            int extractedCount = 0;
+            int skippedCount = 0;
+            // Process each VSIX (or Zip) in the extensionsDir
+            foreach (string fileInDir in Directory.EnumerateFiles(extensionsDir))
+            {
+                // If not a VSIX (or Zip), skip it.
+                if (!fileInDir.EndsWith(".vsix") && !fileInDir.EndsWith(".zip")) continue;
+
+                // Define the directory to extract to
+                var extractDir = GenerateVsixExtractDir(extensionsDir, fileInDir);
+
+                // If directory exists, log message then move on
+                if (Directory.Exists(extractDir))
+                {
+                    Console.Out.WriteLine("Extension already extracted: " + fileInDir);
+                    skippedCount++;
+                    continue;
+                }
+
+                // Extract VSIX to directory
+                string vsixToProcess = Path.Combine(extensionsDir, fileInDir);
+                ExtractFileToDirectory(vsixToProcess, extractDir);
+                Console.Out.WriteLine($"Extracted file: {fileInDir} to directory: {extractDir}");
+                extractedCount++;
+            }
+
+            // Finished. Report results
+            Console.Out.WriteLine($"Extracted extensions: {extractedCount}");
+            Console.Out.WriteLine($"Skipped extensions: {skippedCount}");
+
+        }
+
+        private static string GetExtractDir(string baseDirectory)
+        {
+            // Create the extract directory
+            const string extracted = "extracted";
+            return Path.Combine(baseDirectory, extracted);
+        }
+
+        private static string GenerateVsixExtractDir(string extensionsDir, string fileInDir)
+        {
+            // Create the extract directory
+            return Path.Combine(GetExtractDir(extensionsDir), GetVsixName(fileInDir));
+        }
+
+        private static string GetVsixDirName(string fullFileName)
+        {
+            int startPosn = fullFileName.LastIndexOf(@"\", StringComparison.Ordinal);
+            return fullFileName.Substring(startPosn + 1);
+        }
+
+        private static string GetVsixName(string fullFileName)
+        {
+            // Extract the VSIX name from the file name
+            int startPosn = fullFileName.LastIndexOf(@"\", StringComparison.Ordinal);
+            int endPosn = fullFileName.LastIndexOf(@".", StringComparison.Ordinal);
+            if (endPosn < 0)
+            {
+                return fullFileName.Substring(startPosn + 1);
+            }
+            return fullFileName.Substring(startPosn + 1, endPosn - 1 - startPosn);
+        }
+
+        private static void ExtractFileToDirectory(string fileToExtract, string extractDir)
+        {
+            // Extract (Unzip) the VSIX to a temporary directory
+            ZipFile.ExtractToDirectory(fileToExtract, extractDir);
+        }
+
+        public static void ProcessAll(string extensionsDir, string extractDir)
         {
             PackageHelper packageHelper = new PackageHelper(extensionsDir, extractDir);
 
@@ -35,10 +154,7 @@ namespace ConsoleApplication1
             }
 
             // Ensure that extractDir is wiped clean (if it exists)
-            if (Directory.Exists(extractDir))
-            {
-                Directory.Delete(extractDir, true);
-            }
+            CleanDirectory(extractDir);
 
             // Process each file in the extensionsDir
             Console.Out.WriteLine("Looking for extensions in Extensions Dir: " + extensionsDir);
@@ -65,7 +181,12 @@ namespace ConsoleApplication1
             Console.Out.WriteLine("Finished program");
         }
 
-        public void FetchAssemblyList(string directoryPath)
+        public static string[] FindAllDlls(string parentSearchDir)
+        {
+            return Directory.GetFiles(parentSearchDir, "*.dll", SearchOption.AllDirectories);
+        }
+
+        public static void ProcessAssemblyComparisonForAllExtensions(string directoryPath, IEnumerable<string> baseInstallDlls)
         {
             ConsoleLogger consoleLogger = new ConsoleLogger(true);
 
@@ -76,50 +197,105 @@ namespace ConsoleApplication1
                 throw new ArgumentException("Cannot process files in directory: " + directoryPath);
             }
 
+            List<string> compatibleExtensions = new List<string>();
+            List<string> incompatibleExtensions = new List<string>();
+
             // For each directory inside the directoryPath, analyze its dependencies
             IEnumerable<string> extensionDirs = Directory.EnumerateDirectories(directoryPath);
             foreach (string extensionDir in extensionDirs)
             {
+                string vsixName = GetVsixDirName(extensionDir);
                 Console.Out.WriteLine("Processing assembly directory: {0}", extensionDir);
-                ProcessExtensionAssemblies(extensionDir);
+                bool isCompatible = ProcessExtensionAssemblies(extensionDir, baseInstallDlls);
+                if (isCompatible)
+                {
+                    compatibleExtensions.Add(vsixName);
+                }
+                else
+                {
+                    incompatibleExtensions.Add(vsixName);
+                }
             }
 
-            Console.Out.WriteLine("Finished fetching assemblies");
+            Console.Out.WriteLine($"Compatible extensions: ({compatibleExtensions.Count})");
+            PrintList(compatibleExtensions, "  ", "");
 
+            Console.Out.WriteLine($"Incompatible extensions: ({incompatibleExtensions.Count})");
+            PrintList(incompatibleExtensions, "  ", "");
         }
 
-        private static void ProcessExtensionAssemblies(string extensionDir)
+        private static bool ProcessExtensionAssemblies(string extensionDir, IEnumerable<string> baseInstallDlls)
         {
+            // Fetch all assembly information for all DLLs in the extensionDir
             DependencyAnalyzerResult result = DependencyAnalyzer.Analyze(new DirectoryInfo(extensionDir));
 
-            List<string> assemblies = FetchAssemblyNames(result, true);
+            // Get references assembly list
+            IEnumerable<string> referencedAssemblies = FetchAssemblyNames(result, true);
+            PrintList(referencedAssemblies, "    ", "");
 
-            PrintAssemblyList(assemblies);
+            // Compare referenced assembly list to DLLs in Base Install
+            SortedSet<string> unavailableAssemblies = GetSetSubtraction(referencedAssemblies, baseInstallDlls);
+
+            // Output results for this extensionDir
+            OutputCompatibilityResults(GetVsixDirName(extensionDir), unavailableAssemblies);
+
+            return unavailableAssemblies.Count == 0;
         }
 
-        private static List<string> FetchAssemblyNames(DependencyAnalyzerResult result, bool skipSystem)
+        private static void OutputCompatibilityResults(string vsixName, SortedSet<string> unavailableAssemblies)
         {
-            List<string> assemblyNames = new List<string>();
-            foreach (string assembly in result.Assemblies.Keys.AsEnumerable())
+            if (unavailableAssemblies.Count == 0)
+            {
+                Console.Out.WriteLine("Extension can run on Base Install: " + vsixName);
+            }
+            else
+            {
+                Console.Out.WriteLine("Extension not compatible with Base Install: " + vsixName);
+                Console.Out.WriteLine("Missing DLLs:");
+                PrintList(unavailableAssemblies, "  ", "");
+            }
+        }
+
+        private static SortedSet<string> GetSetSubtraction(IEnumerable<string> assemblies, IEnumerable<string> baseInstallDlls)
+        {
+            SortedSet<string> setSubtraction = new SortedSet<string>();
+            foreach (string assembly in assemblies)
+            {
+                if (!baseInstallDlls.Contains(assembly, StringComparer.OrdinalIgnoreCase))
+                    setSubtraction.Add(assembly);
+            }
+            return setSubtraction;
+        }
+
+        private static IEnumerable<string> FetchAssemblyNames(DependencyAnalyzerResult result, bool skipSystem)
+        {
+            SortedSet<string> assemblyNames = new SortedSet<string>();
+            foreach (string assemblyResultName in result.Assemblies.Keys.AsEnumerable())
             {
                 // Skip the system assemblies if flagged to skip
-                if (skipSystem && (assembly.StartsWith("System") || assembly.StartsWith("mscorlib"))) continue;
+                if (skipSystem && (assemblyResultName.StartsWith("System") || assemblyResultName.StartsWith("mscorlib"))) continue;
 
-                assemblyNames.Add(assembly);
+                string rawAssemblyName = GetAssemblyNameFromResult(assemblyResultName);
+
+                assemblyNames.Add(rawAssemblyName);
             }
             return assemblyNames;
         }
 
-        private static void PrintAssemblyList(List<string> assemblies)
+        private static string GetAssemblyNameFromResult(string assemblyResultName)
         {
-            foreach (string assembly in assemblies)
+            return assemblyResultName.Substring(0, assemblyResultName.IndexOf(",", StringComparison.Ordinal));
+        }
+
+        private static void PrintList(IEnumerable<string> listToPrint, string prefix, string suffix)
+        {
+            foreach (string listItem in listToPrint)
             {
-                // Print out the assembly being referenced
-                Console.Out.WriteLine($"    {assembly}");
+                Console.Out.WriteLine($"{prefix}{listItem}{suffix}");
             }
         }
 
-        private void PrintAnalysis(PackageHelper packageHelper)
+        private static void PrintAnalysis(PackageHelper packageHelper)
         {
             int countExtensions = 0;
             int countMSI = 0;
