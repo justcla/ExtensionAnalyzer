@@ -17,12 +17,13 @@ namespace ConsoleApplication1
 
             const string baseInstallDir = @"C:\Extensions\BaseInstall";
             string baseInstallExtractDir = GetExtractDir(baseInstallDir);
+            const string windowsDotNetDir = @"C:\Windows\Microsoft.NET\Framework\v4.0.30319";
 
 //            CleanDirectory(GetExtractDir(baseInstallDir));
 //            ExtractVsixFiles(baseInstallDir);
 
             // Get list of all DLLs in the Base Install
-            SortedSet<string> baseDllNames = GetBaseInstallDlls(baseInstallExtractDir);
+            SortedSet<string> baseDllNames = GetBaseInstallDlls(baseInstallExtractDir, windowsDotNetDir);
 
 //            ProcessAll(extensionsDir, extractDir);
 //            const string extensionsDir = @"C:\Extensions";
@@ -31,16 +32,22 @@ namespace ConsoleApplication1
             ProcessAssemblyComparisonForAllExtensions(galleryExtensionsDir, baseDllNames);
         }
 
-        private static SortedSet<string> GetBaseInstallDlls(string baseInstallExtractDir)
+        private static SortedSet<string> GetBaseInstallDlls(string baseInstallExtractDir, string windowsDotNetDir)
         {
-            Console.Out.WriteLine("Fetching list of DLLs in Base Install");
-            string[] allBaseDlls = FindAllDlls(baseInstallExtractDir);
-            SortedSet<string> baseDllNames = StripToRawName(allBaseDlls);
+            Console.Out.WriteLine("Fetching list of DLLs in Base Install and Windows .NET Framework");
+
+            // Fetch the DLLs in the base install
+            SortedSet<string> baseDllNames = StripToRawName(FindAllDlls(baseInstallExtractDir));
             Console.Out.WriteLine($"Found {baseDllNames.Count} DLLs in Base VSIXs");
-            // Add the extra ones that we know about
-            baseDllNames.Add("PresentationCore");
-            baseDllNames.Add("PresentationFramework");
-            baseDllNames.Add("WindowsBase");
+
+            // Add the Windows/.NET DLLs
+            SortedSet<string> windowsDlls = StripToRawName(FindAllDlls(windowsDotNetDir));
+            Console.Out.WriteLine($"Found {windowsDlls.Count} DLLs in Windows .NET Directory");
+            foreach(string windowsDll in windowsDlls)
+            {
+                baseDllNames.Add(windowsDll);
+            }
+
             PrintArray(baseDllNames, "  ");
             return baseDllNames;
         }
